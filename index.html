@@ -3,16 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
+    <title>Encuesta Estudiantil</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; padding: 50px; }
-        h1 { color: #333; }
-        .btn { padding: 10px 20px; background-color: blue; color: white; text-decoration: none; border-radius: 5px; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        button {
+            background: #ff9800;
+            color: white;
+            font-size: 18px;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <h1>¡Bienvenido!</h1>
-    <p>Esta es mi primera página en GitHub Pages.</p>
-    <a class="btn" href="https://github.com/">Ir a GitHub</a>
+
+    <div class="container">
+        <h1>¡Tu Opinión Cuenta! 🗳️</h1>
+        <p>Ayúdanos a mejorar la escuela respondiendo esta encuesta.</p>
+
+        <form action="#" method="POST">
+            <label for="nombre">Nombre (Opcional):</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre...">
+
+            <label for="problema">¿Qué te gustaría mejorar en la escuela?</label>
+            <textarea id="problema" name="problema" rows="3" placeholder="Escribe tu opinión..."></textarea>
+
+            <label for="propuesta">¿Cuál de estas ideas te gusta más?</label>
+            <select id="propuesta" name="propuesta">
+                <option value="deporte">Más actividades deportivas</option>
+                <option value="descanso">Espacios de descanso</option>
+                <option value="cultura">Eventos culturales</option>
+                <option value="baños">Mejoras en los baños</option>
+            </select>
+
+            <label for="participar">¿Te gustaría participar en actividades estudiantiles?</label>
+            <select id="participar" name="participar">
+                <option value="si">Sí</option>
+                <option value="no">No, pero quiero saber más</option>
+            </select>
+
+            <button type="submit">Enviar Encuesta</button>
+        </form>
+    </div>
+
 </body>
 </html>
